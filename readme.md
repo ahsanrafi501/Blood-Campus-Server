@@ -1,0 +1,1 @@
+This is backend for Blood Campus App. This is a project for Software Engineering Capstone Project Lab
