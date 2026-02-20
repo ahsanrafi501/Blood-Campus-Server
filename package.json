@@ -14,5 +14,8 @@
   ],
   "author": "Ahsan, Nafi",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
 }
