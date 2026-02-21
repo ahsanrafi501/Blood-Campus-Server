@@ -1,1 +1,1 @@
-export const DB_NAME = "streamingPlatform";
+export const DB_NAME = "bloodCampus";
