@@ -15,7 +15,6 @@ const donorSchema = new Schema(
         },
           avatar: {
             type: String, //cloudnary Url
-            required: true,
         },
         email: {
             type: String,
