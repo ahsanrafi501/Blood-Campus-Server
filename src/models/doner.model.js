@@ -13,6 +13,10 @@ const donorSchema = new Schema(
             unique: true,
             trim: true,
         },
+          avatar: {
+            type: String, //cloudnary Url
+            required: true,
+        },
         email: {
             type: String,
             required: [true, "DIU email is required"],
