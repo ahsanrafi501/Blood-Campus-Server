@@ -19,4 +19,7 @@ app.use(express.static("Public"))
 app.use(cookieParser())
 
 
+import donorRegisterRoute from "./routes/donarRegister.route.js"
+app.use("/api/v1/donor", donorRegisterRoute)
+
 export {app}

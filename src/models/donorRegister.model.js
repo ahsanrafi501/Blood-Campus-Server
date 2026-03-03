@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const donorSchema = new Schema(
+const donorRegisterSchema = new Schema(
     {
         fullName: {
             type: String,
@@ -63,7 +63,7 @@ const donorSchema = new Schema(
         privacyMode: {
             type: String,
             enum: ["Public", "OnAccept"],
-            default: "OnAccept",
+            default: "Public",
         },
         totalDonations: {
             type: Number,
@@ -75,7 +75,7 @@ const donorSchema = new Schema(
     }
 );
 
-donorSchema.virtual('isEligible').get(function() {
+donorRegisterSchema.virtual('isEligible').get(function() {
     if (!this.lastDonationDate) return true;
 
     const today = new Date();
@@ -84,6 +84,6 @@ donorSchema.virtual('isEligible').get(function() {
     return diffDays >= 120;
 });
 
-donorSchema.set('toJSON', { virtuals: true });
+donorRegisterSchema.set('toJSON', { virtuals: true });
 
-export const Donor = mongoose.model("Donor", donorSchema);
+export const DonorRegister = mongoose.model("DonorRegister", donorRegisterSchema);
